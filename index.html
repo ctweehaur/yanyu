@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>常用谚语218句</title>
+    <title>常用谚语 218 句</title>
     <!-- Tailwind CSS Engine -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts for premium Chinese Serif & English Inter layout -->
@@ -70,17 +70,17 @@
 
     <div id="app" class="w-full max-w-lg pt-4 flex flex-col">
         <header class="text-center mb-4">
-            <h1 class="text-2xl font-bold text-stone-700 tracking-wide yanyu-title">常用谚语150句</h1>
+            <h1 class="text-2xl font-bold text-stone-700 tracking-wide yanyu-title dynamic-title">常用谚语进行中...</h1>
             <!-- 掌握度进度条（Gamification 仪表盘） -->
             <div class="mt-3 bg-stone-200/60 rounded-full h-2 w-full overflow-hidden flex">
                 <div id="mastery-progress-bar" class="bg-emerald-500 h-full transition-all duration-500" style="width: 0%"></div>
             </div>
-            <p id="mastery-status" class="text-[10px] text-stone-400 mt-1.5 font-mono tracking-wider">已掌握 0 / 150 词 (0%)</p>
+            <p id="mastery-status" class="text-[10px] text-stone-400 mt-1.5 font-mono tracking-wider">正在动态合并加载数据包...</p>
         </header>
 
         <!-- A-Z 拼音首字母智能过滤导航栏 -->
         <nav class="flex gap-1.5 flex-wrap justify-center mb-4" id="filterNav">
-            <!-- 字母表按钮将由 JavaScript 动态生成以自动检测具有有效数据的字母 -->
+            <!-- 字母表按钮将由 JavaScript 动态扫描生成以自动避开无数据首字母 -->
         </nav>
 
         <div class="grid grid-cols-2 gap-3 mb-4">
@@ -95,7 +95,7 @@
             </button>
         </div>
 
-        <div id="card-container" class="w-full h-[390px] sm:h-[410px] cursor-pointer mb-4 relative">
+        <div id="card-container" class="w-full h-[390px] sm:h-[415px] cursor-pointer mb-4 relative">
             <div id="flip-card" class="w-full h-full relative transform-style-3d">
                 
                 <!-- 卡片正面：谚语与大拼音 -->
@@ -105,7 +105,7 @@
                     </div>
                 </div>
 
-                <!-- 卡片反面：双栏翻译 + 大字号释义 + 语境例句（挖空） -->
+                <!-- 卡片反面：双栏翻译 + 大字号释义 + 语境例句（带智能挖空下划线） -->
                 <div class="absolute inset-0 bg-orange-50/40 rounded-2xl border-2 border-orange-100/60 shadow-xl shadow-stone-200/50 flex flex-col p-5 backface-hidden overflow-hidden">
                     <!-- 内层典雅细线框 -->
                     <div class="absolute inset-2 border border-amber-900/5 rounded-xl pointer-events-none"></div>
@@ -137,7 +137,7 @@
                             </div>
                         </div>
 
-                        <!-- 例句语境展示区（带智能挖空机制） -->
+                        <!-- 例句语境展示区 -->
                         <div id="card-example-box">
                             <!-- 动态加载例句 -->
                         </div>
@@ -199,7 +199,7 @@
     </div>
 
     <!-- ==========================================
-         🧱 核心数据引入区（严格解耦自6个分卷文件）
+         🧱 核心数据引入区（前瞻性加载您的所有数据文件）
          ========================================== -->
     <script src="data-proverb-1.js"></script>
     <script src="data-proverb-2.js"></script>
@@ -207,9 +207,12 @@
     <script src="data-proverb-4.js"></script>
     <script src="data-proverb-5.js"></script>
     <script src="data-proverb-6.js"></script>
+    <!-- 如果您未来扩充到更大数据，只需直接在下方引入 7 和 8 即可，核心逻辑完全不需改动！ -->
+    <script src="data-proverb-7.js"></script>
+    <script src="data-proverb-8.js"></script>
 
     <!-- ==========================================
-         🧬 主数据自动打包器与合并中心
+         🧬 主数据自动合并区
          ========================================== -->
     <script>
         let allProverbs = [];
@@ -219,10 +222,12 @@
         if(typeof pData4 !== 'undefined') allProverbs = allProverbs.concat(pData4);
         if(typeof pData5 !== 'undefined') allProverbs = allProverbs.concat(pData5);
         if(typeof pData6 !== 'undefined') allProverbs = allProverbs.concat(pData6);
+        if(typeof pData7 !== 'undefined') allProverbs = allProverbs.concat(pData7);
+        if(typeof pData8 !== 'undefined') allProverbs = allProverbs.concat(pData8);
     </script>
 
     <!-- ==========================================
-         🎮 核心业务及交互逻辑控制引擎
+         🎮 核心业务及自适应大标题算法控制层
          ========================================== -->
     <script>
         let currentPlan = [];       
@@ -261,6 +266,14 @@
         // 应用生命周期挂载
         function initApp() {
             try {
+                // 1. 动态改写页面的标题数量
+                const totalCount = allProverbs.length;
+                document.title = `常用谚语 ${totalCount} 句`;
+                const titleHeaders = document.querySelectorAll('.dynamic-title');
+                titleHeaders.forEach(el => {
+                    el.innerText = `常用谚语 ${totalCount} 句`;
+                });
+
                 let wrongList = JSON.parse(localStorage.getItem('yanyu_wrong_list')) || [];
                 updateWeaknessButton(wrongList.length);
 
@@ -337,11 +350,13 @@
             const exampleBox = document.getElementById('card-example-box');
             if (exampleBox) {
                 const proverbText = currentProverb.text || '';
+                // 清理可能带句号的谚语文本匹配
+                const cleanProverbText = proverbText.replace(/[。，]/g, '');
                 let exampleText = currentProverb.example || '';
                 
                 if (exampleText) {
-                    if (proverbText && exampleText.includes(proverbText)) {
-                        exampleText = exampleText.replace(proverbText, ` ______ `);
+                    if (cleanProverbText && exampleText.includes(cleanProverbText)) {
+                        exampleText = exampleText.replace(new RegExp(cleanProverbText, 'g'), ` ______ `);
                     }
                     exampleBox.innerHTML = `
                         <div class="bg-white/80 border border-amber-950/5 p-3.5 rounded-xl shadow-sm">
@@ -393,7 +408,7 @@
 
         function updateMasteryProgress() {
             let wrongList = JSON.parse(localStorage.getItem('yanyu_wrong_list')) || [];
-            const totalWords = allProverbs.length || 150;
+            const totalWords = allProverbs.length || 218;
             const wrongCount = wrongList.length;
             const masteredCount = Math.max(0, totalWords - wrongCount);
             
@@ -572,8 +587,9 @@
                 // 【Type 2】：高阶语境挖空填空
                 let exampleText = currentQ.example || '目前这句谚语暂无例句语境支持。';
                 const proverbText = currentQ.text || '';
-                if (proverbText && exampleText.includes(proverbText)) {
-                    exampleText = exampleText.replace(proverbText, ` ______ `);
+                const cleanProverbText = proverbText.replace(/[。，]/g, '');
+                if (cleanProverbText && exampleText.includes(cleanProverbText)) {
+                    exampleText = exampleText.replace(new RegExp(cleanProverbText, 'g'), ` ______ `);
                 }
                 
                 questionWordEl.innerHTML = `<span class="text-[10px] bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded font-sans font-medium block w-max mx-auto mb-2">谚语语境填空</span><p class="text-sm font-medium font-sans px-4 text-stone-700 leading-relaxed text-left">${exampleText}</p>`;
