@@ -19,8 +19,8 @@ const pData4 = [
   },
   {
     "id": 78,
-    "text": "平时不烧香，临时抱佛脚",
-    "pinyin": "píng shí bù shāo xiāng ， lín shí bào fó jiǎo",
+    "text": "平时不烧香，<br>临时抱佛脚",
+    "pinyin": "píng shí bù shāo xiāng lín shí bào fó jiǎo",
     "pinyin_key": "P",
     "meaning": "比喻平时不作任何准备，到了情况紧急时才仓促想办法应付。",
     "en": "Never burn incense in quiet times, but clasp Buddha's feet at the last minute.",
@@ -38,7 +38,7 @@ const pData4 = [
   {
     "id": 80,
     "text": "千里之行，始于足下",
-    "pinyin": "qiān lǐ zhī xíng ， shǐ yú zú xià",
+    "pinyin": "qiān lǐ zhī xíng shǐ yú zú xià",
     "pinyin_key": "Q",
     "meaning": "比喻任何宏大的远大理想或长远计划，都是从基础的一小步开始的。",
     "en": "A journey of a thousand miles begins with a single step.",
@@ -47,7 +47,7 @@ const pData4 = [
   {
     "id": 81,
     "text": "前人栽树，后人乘凉",
-    "pinyin": "qián rén zāi shù ， hòu rén chéng liáng",
+    "pinyin": "qián rén zāi shù hòu rén chéng liáng",
     "pinyin_key": "Q",
     "meaning": "比喻前辈辛勤劳动创造了财富或好的环境，让后代人享受现成的成果。",
     "en": "One generation plants the trees, and another gets the shade.",
@@ -101,7 +101,7 @@ const pData4 = [
   {
     "id": 87,
     "text": "人不可貌相，海水不可斗量",
-    "pinyin": "rén bù kě mào xiàng ， hǎi shuǐ bù kě dǒu liáng",
+    "pinyin": "rén bù kě mào xiàng hǎi shuǐ bù kě dǒu liáng",
     "pinyin_key": "R",
     "meaning": "比喻不能光凭外貌来低估或评判一个人的真实才能和未来价值。",
     "en": "Don't judge a book by its cover; ocean water cannot be measured with a bucket.",
@@ -137,7 +137,7 @@ const pData4 = [
   {
     "id": 91,
     "text": "人心齐，泰山移",
-    "pinyin": "rén xīn qí ， tài shān yí",
+    "pinyin": "rén xīn qí tài shān yí",
     "pinyin_key": "R",
     "meaning": "比喻只要大家思想一致，齐心协力，就能克服最大的困难，创造奇迹。",
     "en": "When people are of one mind, they can move Mount Tai; unity is strength.",
@@ -164,7 +164,7 @@ const pData4 = [
   {
     "id": 94,
     "text": "人在江湖，身不由己",
-    "pinyin": "rén zài jiāng hú ， shēn bù yóu jǐ",
+    "pinyin": "rén zài jiāng hú shēn bù yóu jǐ",
     "pinyin_key": "R",
     "meaning": "比喻置身于某种社会环境或复杂关系中，行动被迫受到限制，无法按照自己的意愿行事。",
     "en": "One cannot act as one pleases in the world; forced by circumstances.",
@@ -191,7 +191,7 @@ const pData4 = [
   {
     "id": 97,
     "text": "三十六计，走为上计",
-    "pinyin": "sān shí liù jì ， zǒu wéi shàng jì",
+    "pinyin": "sān shí liù jì zǒu wéi shàng jì",
     "pinyin_key": "S",
     "meaning": "指在局势完全失去控制、面临绝境时，彻底逃跑、避开矛盾是最好的办法。",
     "en": "Of all the thirty-six stratagems, retreating is the best.",
@@ -209,7 +209,7 @@ const pData4 = [
   {
     "id": 99,
     "text": "三天打鱼，两天晒网",
-    "pinyin": "sān tiān dǎ yú ， liǎng tiān shài wǎng",
+    "pinyin": "sān tiān dǎ yú liǎng tiān shài wǎng",
     "pinyin_key": "S",
     "meaning": "比喻对学习或工作缺乏持之以恒的毅力，经常间断，断断续续。",
     "en": "Work by fits and starts; do things lack of perseverance.",
