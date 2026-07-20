@@ -11,7 +11,7 @@ const pData2 = [
   {
     "id": 27,
     "text": "各人自扫门前雪，莫管他人瓦上霜",
-    "pinyin": "gè rén zì sǎo mén qián xuě ， mò guǎn tā rén wǎ shàng shuāng",
+    "pinyin": "gè rén zì sǎo mén qián xuě mò guǎn tā rén wǎ shàng shuāng",
     "pinyin_key": "G",
     "meaning": "比喻每个人只管自己的事，不管别人的闲事，形容自私冷漠。",
     "en": "Each sweeps the snow from his own doorstep and discards the frost on his neighbor's roof.",
@@ -20,7 +20,7 @@ const pData2 = [
   {
     "id": 28,
     "text": "公说公有理，婆说婆有理",
-    "pinyin": "gōng shuō gōng yǒu lǐ ， pó shuō pó yǒu lǐ",
+    "pinyin": "gōng shuō gōng yǒu lǐ pó shuō pó yǒu lǐ",
     "pinyin_key": "G",
     "meaning": "比喻双方争执不下，各自都有自己的理由，很难分清是非。",
     "en": "Both sides claim to be in the right; each has their own arguments.",
@@ -56,7 +56,7 @@ const pData2 = [
   {
     "id": 32,
     "text": "好人做到底，送佛送到西",
-    "pinyin": "hǎo rén zuò dào dǐ ， sòng fó sòng dào xī",
+    "pinyin": "hǎo rén zuò dào dǐ sòng fó sòng dào xī",
     "pinyin_key": "H",
     "meaning": "比喻做好事要坚持到底，帮助别人要帮得彻底。",
     "en": "If you do a good deed, do it thoroughly; escort Buddha all the way to the West.",
@@ -146,7 +146,7 @@ const pData2 = [
   {
     "id": 42,
     "text": "活到老，学到老",
-    "pinyin": "huó dào lǎo ， xué dào lǎo",
+    "pinyin": "huó dào lǎo xué dào lǎo",
     "pinyin_key": "H",
     "meaning": "指学无止境，人一生都要不断地学习新知识。",
     "en": "Live and learn; one is never too old to learn.",
@@ -191,7 +191,7 @@ const pData2 = [
   {
     "id": 47,
     "text": "捡了芝麻，丢了西瓜",
-    "pinyin": "jiǎn le zhī ma ， diū le xī guā",
+    "pinyin": "jiǎn le zhī ma diū le xī guā",
     "pinyin_key": "J",
     "meaning": "比喻只抓住了微小的利益，却失去了巨大的、更重要的利益。",
     "en": "Penny wise, pound foolish; lose the sheep for a ha'porth of tar.",
@@ -200,7 +200,7 @@ const pData2 = [
   {
     "id": 48,
     "text": "见怪不怪，其怪自败",
-    "pinyin": "jiàn guài bù guài ， qí guài zì bài",
+    "pinyin": "jiàn guài bù guài qí guài zì bài",
     "pinyin_key": "J",
     "meaning": "看到怪异现象时不惊慌失措，怪异的现象自然就构不成威胁。",
     "en": "Facing anomalous things with a calm mind, the monster will fail itself.",
