@@ -11,7 +11,7 @@ const pData5 = [
   {
     "id": 102,
     "text": "世上无难事，只怕有心人",
-    "pinyin": "shì shàng wú nán shì ， zhǐ pà yǒu xīn rén",
+    "pinyin": "shì shàng wú nán shì zhǐ pà yǒu xīn rén",
     "pinyin_key": "S",
     "meaning": "只要有坚定的决心和恒心，世界上就绝对没有任何办不到的难事。",
     "en": "Nothing is impossible to a willing heart.",
@@ -29,7 +29,7 @@ const pData5 = [
   {
     "id": 104,
     "text": "水能载舟，亦能覆舟",
-    "pinyin": "shuǐ néng zài zhōu ， yì néng fù zhōu",
+    "pinyin": "shuǐ néng zài zhōu yì néng fù zhōu",
     "pinyin_key": "S",
     "meaning": "比喻事物具有双面性；统治者若得不到百姓支持，就会被推翻。",
     "en": "Water can carry a boat, but it can also capsize it.",
@@ -74,7 +74,7 @@ const pData5 = [
   {
     "id": 109,
     "text": "台上一分钟，台下十年功",
-    "pinyin": "tái shàng yī fēn zhōng ， tái xià shí nián gōng",
+    "pinyin": "tái shàng yī fēn zhōng tái xià shí nián gōng",
     "pinyin_key": "T",
     "meaning": "短暂的精彩表现，背后需要付出长年累月的艰苦练习和准备。",
     "en": "One minute of brilliant performance on stage requires ten years of practice off stage.",
@@ -137,7 +137,7 @@ const pData5 = [
   {
     "id": 116,
     "text": "头痛医头，脚痛医脚",
-    "pinyin": "tóu tòng yī tóu ， jiǎo tòng yī jiǎo",
+    "pinyin": "tóu tòng yī tóu jiǎo tòng yī jiǎo",
     "pinyin_key": "T",
     "meaning": "比喻处理问题时只解决表面现象，属于治标不治本的被动做法。",
     "en": "Treat the symptoms rather than the disease; temporary patchwork.",
@@ -146,7 +146,7 @@ const pData5 = [
   {
     "id": 117,
     "text": "万事俱备，只欠东风",
-    "pinyin": "wàn shì jù bèi ， zhǐ qiàn dōng fēng",
+    "pinyin": "wàn shì jù bèi zhǐ qiàn dōng fēng",
     "pinyin_key": "W",
     "meaning": "比喻一切都已经准备妥当了，只差最后一个至关重要的决定性条件。",
     "en": "Everything is ready except for the crucial catalyst.",
@@ -200,7 +200,7 @@ const pData5 = [
   {
     "id": 123,
     "text": "物以类聚，人以群分",
-    "pinyin": "wù yǐ lèi jù ， rén yǐ qún fēn",
+    "pinyin": "wù yǐ lèi jù rén yǐ qún fēn",
     "pinyin_key": "W",
     "meaning": "同类的事物总是聚集在一起，志同道合或性格相似的人也总是聚成一伙。",
     "en": "Birds of a feather flock together.",
