@@ -6,7 +6,8 @@ const pData6 = [
     "pinyin_key": "X",
     "meaning": "比喻新官员刚刚上任时，为了树立威信，往往会先做几件轰轰烈烈的大事。",
     "en": "A new broom sweeps clean.",
-    "bm": "Pegawai yang baru dilantik biasanya akan menunjukkan kesungguhan yang tinggi pada awal tugas."
+    "bm": "Pegawai yang baru dilantik biasanya akan menunjukkan kesungguhan yang tinggi pada awal tugas.",
+    "example": "新来的训导主任新官上任三把火，第一周就严厉清查了全校违规改装校服和染发的问题。"
   },
   {
     "id": 127,
@@ -15,7 +16,8 @@ const pData6 = [
     "pinyin_key": "X",
     "meaning": "指只要不亲眼看到让人讨厌或心烦的人和事物，心里就不会觉得烦恼。",
     "en": "Out of sight, out of mind.",
-    "bm": "Apabila tidak melihat perkara yang menyakitkan hati, jiwa akan menjadi tenang."
+    "bm": "Apabila tidak melihat perkara yang menyakitkan hati, jiwa akan menjadi tenang.",
+    "example": "桌子上散落的那堆杂乱账单看着就让人头疼，我索性全扫进抽屉里，眼不见，心不烦。"
   },
   {
     "id": 128,
@@ -24,7 +26,8 @@ const pData6 = [
     "pinyin_key": "Y",
     "meaning": "比喻一桩麻烦事或灾祸还没有彻底解决，新的问题又紧接着接二连三地发生了。",
     "en": "One trouble follows another; before one wave subsides, another rises.",
-    "bm": "Masalah yang bertimpa-timpa datang tanpa henti."
+    "bm": "Masalah yang bertimpa-timpa datang tanpa henti.",
+    "example": "学校的旧发电机故障还没完全修好，今天大礼堂的屋顶又被暴风雨吹漏水了，真是一波未平，一波又起。"
   },
   {
     "id": 129,
@@ -33,7 +36,8 @@ const pData6 = [
     "pinyin_key": "Y",
     "meaning": "比喻做事非常脚踏实地，每一步都非常稳健、认真且扎实。",
     "en": "Step by step; down-to-earth progress.",
-    "bm": "Melakukan tugasan dengan teratur, sabar, dan penuh komitmen."
+    "bm": "Melakukan tugasan dengan teratur, sabar, dan penuh komitmen.",
+    "example": "华文基础薄弱不要紧，只要你每天坚持温习一句古诗，一步一个脚印，毕业前必定能看到质的飞跃。"
   },
   {
     "id": 130,
@@ -42,7 +46,8 @@ const pData6 = [
     "pinyin_key": "Y",
     "meaning": "指事情一旦发生，局势就迅速恶化到无法控制、无法收场的地步。",
     "en": "Get completely out of hand; run wild.",
-    "bm": "Sesuatu keadaan yang merebak dengan cepat sehingga tidak dapat dikawal lagi."
+    "bm": "Sesuatu keadaan yang merebak dengan cepat sehingga tidak dapat dikawal lagi.",
+    "example": "最初只是班上的小摩擦，结果因为几个旁观同学瞎起哄，事态演变得一发不可收拾，最后惊动了纪律处。"
   },
   {
     "id": 131,
@@ -51,7 +56,8 @@ const pData6 = [
     "pinyin_key": "Y",
     "meaning": "付出了多少辛勤的劳动和汗水，就一定会得到多少应有的回报。",
     "en": "No pain, no gain; you reap what you sow.",
-    "bm": "Usaha yang gigih pasti akan membuahkan hasil yang setimpal."
+    "bm": "Usaha yang gigih pasti akan membuahkan hasil yang setimpal.",
+    "example": "他在华文写作比赛中能够拿到全国特等奖，都是因为长年雷打不动地坚持练笔，一分耕耘，一分收获。"
   },
   {
     "id": 132,
@@ -60,7 +66,8 @@ const pData6 = [
     "pinyin_key": "Y",
     "meaning": "第一次见面或接触时感到陌生，到了第二次接触时就熟悉了。",
     "en": "Difficult at first, easy later; strangers at first meeting, friends at second.",
-    "bm": "Kali pertama berasa kekok, kali kedua akan menjadi biasa dan mesra."
+    "bm": "Kali pertama berasa kekok, kali kedua akan menjadi biasa dan mesra.",
+    "example": "第一天上台主持华文晚会时他紧张得直发抖，但一回生，二回熟，今天第二次上台就表现得从容自然了。"
   },
   {
     "id": 133,
@@ -69,7 +76,8 @@ const pData6 = [
     "pinyin_key": "Y",
     "meaning": "比喻做任何事情都是循序渐进的，绝对不可能一下子就取得巨大的成功。",
     "en": "Rome wasn't built in a day; you can't get fat with one mouthful.",
-    "bm": "Kejayaan memerlukan masa, tidak mungkin dapat dicapai dalam sekelip mata."
+    "bm": "Kejayaan memerlukan masa, tidak mungkin dapat dicapai dalam sekelip mata.",
+    "example": "学琴才两天就想去弹奏世界名曲是不切实际的，一口吃不成胖子，我们必须从最基本的音阶开始练起。"
   },
   {
     "id": 134,
@@ -78,7 +86,8 @@ const pData6 = [
     "pinyin_key": "Y",
     "meaning": "比喻在同一个势力范围或者地盘内，绝对容不下两个同样强悍的首领。",
     "en": "Two tigers cannot share the same mountain; no room for two rivals.",
-    "bm": "Dua orang yang sama-sama berkuasa tidak boleh bertugas di dalam satu tempat."
+    "bm": "Dua orang yang sama-sama berkuasa tidak boleh bertugas di dalam satu tempat.",
+    "example": "这两个明星性格都极其傲慢强势，现在却被安排在同一部大剧里担任双主角，真让人担心一山不能容二虎。"
   },
   {
     "id": 135,
@@ -87,7 +96,8 @@ const pData6 = [
     "pinyin_key": "Y",
     "meaning": "比喻一旦犯下一个极其严重的原则性错误，就会成为终生无法挽回的巨大遗憾。",
     "en": "A single misstep causes eternal regret.",
-    "bm": "Satu kesilapan besar yang dilakukan akan menyebabkan penyesalan seumur hidup."
+    "bm": "Satu kesilapan besar yang dilakukan akan menyebabkan penyesalan seumur hidup.",
+    "example": "他原本前途一片光明，却因为一时贪念替不法分子运送违禁品而被捕，真是一失足成千古恨。"
   },
   {
     "id": 136,
@@ -96,7 +106,8 @@ const pData6 = [
     "pinyin_key": "Y",
     "meaning": "一句话说出了口，用四匹马拉的快车也无法追回。比喻说话一定要极其守信用。",
     "en": "A word spoken cannot be recalled; promises must be kept.",
-    "bm": "Kata-kata yang telah dilafazkan mestilah dikotakan dan tidak boleh ditarik balik."
+    "bm": "Kata-kata yang telah dilafazkan mestilah dikotakan dan tidak boleh ditarik balik.",
+    "example": "既然你已经当众答应了要负责这次华文诗歌朗诵比赛的道具制作，一言既出，驷马难追，就不能推卸责任。"
   },
   {
     "id": 137,
@@ -105,7 +116,8 @@ const pData6 = [
     "pinyin_key": "Y",
     "meaning": "形容水域（如河流、海峡）非常狭窄，像一条衣带。也借指两地距离极近。",
     "en": "Separated only by a narrow strip of water.",
-    "bm": "Kawasan yang kedudukannya sangat dekat dan hanya dipisahkan oleh sungai yang sempit."
+    "bm": "Kawasan yang kedudukannya sangat dekat dan hanya dipisahkan oleh sungai yang sempit.",
+    "example": "马六甲海峡两岸的很多港口城镇其实是一衣带水的近邻，自古以来商贸和民间往来就极其频繁。"
   },
   {
     "id": 138,
@@ -114,7 +126,8 @@ const pData6 = [
     "pinyin_key": "Y",
     "meaning": "比喻完全机械地模仿现成的样本照着做，缺乏任何实质性的创新。",
     "en": "Copy mechanically; follow the copy blindly.",
-    "bm": "Meniru bulat-bulat apa yang dilakukan oleh orang lain tanpa sebarang kreativiti."
+    "bm": "Meniru bulat-bulat apa yang dilakukan oleh orang lain tanpa sebarang kreativiti.",
+    "example": "这次的线上绘本推广方案如果只是依葫芦画瓢地照抄别人的旧套路，没有本土化特色，是很难打动本地老师的。"
   },
   {
     "id": 139,
@@ -123,7 +136,8 @@ const pData6 = [
     "pinyin_key": "Y",
     "meaning": "借了别人的财物能按时归还，以后再次向别人借用时就不会遭到拒绝。",
     "en": "Timely return of a loan makes borrowing again easy.",
-    "bm": "Sentiasa memulangkan barang yang dipinjam dengan baik agar mudah dipinjam lagi pada masa depan."
+    "bm": "Sentiasa memulangkan barang yang dipinjam dengan baik agar mudah dipinjam lagi pada masa depan.",
+    "example": "上次向我借的那本华文参考书，你拖了半年才还，这次又想借，虽说有借有还，再借不难，但我心里真有点犹豫。"
   },
   {
     "id": 140,
@@ -132,7 +146,8 @@ const pData6 = [
     "pinyin_key": "Y",
     "meaning": "有什么样的父亲，往往就会生出什么样性格或行为方式的儿子。",
     "en": "Like father, like son.",
-    "bm": "Bapa borek anak rintik; bagaimana acuan begitulah kuihnya."
+    "bm": "Bapa borek anak rintik; bagaimana acuan begitulah kuihnya.",
+    "example": "老陈待人接物向来宽厚慷慨，他的儿子在学校也总是热心帮助清寒同学，真是有其父必有其子。"
   },
   {
     "id": 141,
@@ -141,7 +156,8 @@ const pData6 = [
     "pinyin_key": "Y",
     "meaning": "只要一个人有坚定的志向和不懈的奋斗，就一定能把事情做成功。",
     "en": "Where there is a will, there is a way.",
-    "bm": "Di mana ada kemahuan, di situ ada jalan; orang yang mempunyai cita-cita pasti akan berjaya."
+    "bm": "Di mana ada kemahuan, di situ ada jalan; orang yang mempunyai cita-cita pasti akan berjaya.",
+    "example": "虽然家境贫寒且半工半读，但他凭着惊人的毅力最终成功拿到了大学全额奖学金，证明了有志者事竟成。"
   },
   {
     "id": 142,
@@ -150,7 +166,8 @@ const pData6 = [
     "pinyin_key": "Y",
     "meaning": "远方的亲戚在紧急关头，往往不如居住在身边的邻居能够随时提供直接的帮助。",
     "en": "A close neighbor is better than a distant relative.",
-    "bm": "Jiran yang dekat adalah lebih berguna daripada saudara-mara yang tinggal jauh semasa kecemasan."
+    "bm": "Jiran yang dekat adalah lebih berguna daripada saudara-mara yang tinggal jauh semasa kecemasan.",
+    "example": "上周老奶奶深夜突发急性肠胃炎，多亏隔壁的黄先生开车紧急送医，真让人感慨远亲不如近邻。"
   },
   {
     "id": 143,
@@ -159,7 +176,8 @@ const pData6 = [
     "pinyin_key": "Y",
     "meaning": "比喻某些事物到了特定的关键时刻，会展现出最美好、最圆满的一面。",
     "en": "The moon is exceptionally bright during the Mid-Autumn Festival.",
-    "bm": "Sesuatu perkara akan kelihatan paling indah dan sempurna pada waktu yang tepat."
+    "bm": "Sesuatu perkara akan kelihatan paling indah dan sempurna pada waktu yang tepat.",
+    "example": "平日里难得一见的四代同堂画面，在今天老太爷九十岁大寿的家宴上完美呈现，真是月到中秋分外明。"
   },
   {
     "id": 144,
@@ -168,7 +186,8 @@ const pData6 = [
     "pinyin_key": "Z",
     "meaning": "比喻取得了成绩后绝不骄傲，继续加倍努力奋斗。",
     "en": "Make unremitting efforts; continue the good work.",
-    "bm": "Terus berusaha dengan lebih gigih tanpa mengalah setelah mencapai kejayaan awal."
+    "bm": "Terus berusaha dengan lebih gigih tanpa mengalah setelah mencapai kejayaan awal.",
+    "example": "这次预考虽然拿到了华文A等荣誉，但千万不能掉以轻心，期末正考还要再接再厉。"
   },
   {
     "id": 145,
@@ -177,7 +196,8 @@ const pData6 = [
     "pinyin_key": "Z",
     "meaning": "比喻坏人自己做了坏事，为了逃避惩罚，故意大喊大叫转移视线，以此诬陷好人。",
     "en": "A thief crying 'thief'; divert attention from oneself.",
-    "bm": "Orang yang bersalah cuba berlagak suci dengan menuduh orang lain demi menyelamatkan diri."
+    "bm": "Orang yang bersalah cuba berlagak suci dengan menuduh orang lain demi menyelamatkan diri.",
+    "example": "分明是他自己偷偷拷贝了同事的创意设计方案，却跑到经理面前指责对方抄袭，这种贼喊捉贼的行径令人作呕。"
   },
   {
     "id": 146,
@@ -186,7 +206,8 @@ const pData6 = [
     "pinyin_key": "Z",
     "meaning": "指用不正当的手段捞取额外的微小利益，或者口头上让人吃亏。",
     "en": "Take advantage of; gain petty advantages.",
-    "bm": "Suka mengambil kesempatan untuk mendapatkan keuntungan mudah daripada orang lain."
+    "bm": "Suka mengambil kesempatan untuk mendapatkan keuntungan mudah daripada orang lain.",
+    "example": "每次跟小组同学出去聚餐，他总是借故上厕所漏掉付钱，这种喜欢占便宜的作风让大家很反感。"
   },
   {
     "id": 147,
@@ -195,7 +216,8 @@ const pData6 = [
     "pinyin_key": "Z",
     "meaning": "纸张是无法把燃烧的火包裹住的。比喻事实真相和罪行是绝对隐藏不住的，迟早会败露。",
     "en": "Truth will out; paper cannot wrap up fire.",
-    "bm": "Sepandai-pandai tupai melompat, akhirnya jatuh ke tanah juga; kebenaran tidak boleh disembunyikan."
+    "bm": "Sepandai-pandai tupai melompat, akhirnya jatuh ke tanah juga; kebenaran tidak boleh disembunyikan.",
+    "example": "他虽然极力掩盖自己在账目报表上的错漏，但纸包不住火，年终的专业外部审计一查就露馅了。"
   },
   {
     "id": 148,
@@ -204,7 +226,8 @@ const pData6 = [
     "pinyin_key": "Z",
     "meaning": "比喻空谈理论，脱离实际，完全没有实际解决问题的经验。",
     "en": "Armchair strategy; theoretical discussion completely divorced from practice.",
-    "bm": "Hanya pandai bercakap atau merancang di atas kertas tetapi gagal dalam amalan realiti."
+    "bm": "Hanya pandai bercakap atau merancang di atas kertas tetapi gagal dalam amalan realiti.",
+    "example": "你如果从来没有实际走入国际学校去观摩过华文课堂，写的线上教学教案就很容易流于纸上谈兵。"
   },
   {
     "id": 149,
@@ -213,7 +236,8 @@ const pData6 = [
     "pinyin_key": "Z",
     "meaning": "比喻做了什么样的善因或恶因，就一定会得到什么样的相应报应或结果。",
     "en": "As you sow, so shall you reap.",
-    "bm": "Bagaimana acuan begitulah kuihnya; apa yang kita lakukan akan mendapat balasan yang setimpal."
+    "bm": "Bagaimana acuan begitulah kuihnya; apa yang kita lakukan akan mendapat balasan yang setimpal.",
+    "example": "你平日里对周围邻里刻薄冷漠，现在遇到困难没人愿意出手相助，也算是种瓜得瓜，种豆得豆了。"
   },
   {
     "id": 150,
@@ -222,6 +246,7 @@ const pData6 = [
     "pinyin_key": "Z",
     "meaning": "比喻人多力量大，大家只要齐心协力，就能把事情办得红红火火。",
     "en": "Many hands make light work; when everybody brings firewood, the flame rises high.",
-    "bm": "Ringan sama dijinjing, berat sama dipikul; kerjasama ramal orang membuahkan hasil yang besar."
+    "bm": "Ringan sama dijinjing, berat sama dipikul; kerjasama ramai orang membuahkan hasil yang besar.",
+    "example": "距离学校百年校庆的舞台布置只剩下三个小时了，全校师生一起动手，众人拾柴火焰高，终于赶在开幕前搭建完毕。"
   }
 ];
