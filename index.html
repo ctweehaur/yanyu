@@ -80,7 +80,7 @@
 
         <!-- A-Z 拼音首字母智能过滤导航栏 -->
         <nav class="flex gap-1.5 flex-wrap justify-center mb-4" id="filterNav">
-            <!-- 字母表按钮将由 JavaScript 动态生成以检测具有有效数据的字母 -->
+            <!-- 字母表按钮将由 JavaScript 动态生成以自动检测具有有效数据的字母 -->
         </nav>
 
         <div class="grid grid-cols-2 gap-3 mb-4">
@@ -95,7 +95,7 @@
             </button>
         </div>
 
-        <div id="card-container" class="w-full h-[380px] sm:h-[400px] cursor-pointer mb-4 relative">
+        <div id="card-container" class="w-full h-[390px] sm:h-[410px] cursor-pointer mb-4 relative">
             <div id="flip-card" class="w-full h-full relative transform-style-3d">
                 
                 <!-- 卡片正面：谚语与大拼音 -->
@@ -105,7 +105,7 @@
                     </div>
                 </div>
 
-                <!-- 卡片反面：双栏翻译 + 大字号释义 -->
+                <!-- 卡片反面：双栏翻译 + 大字号释义 + 语境例句（挖空） -->
                 <div class="absolute inset-0 bg-orange-50/40 rounded-2xl border-2 border-orange-100/60 shadow-xl shadow-stone-200/50 flex flex-col p-5 backface-hidden overflow-hidden">
                     <!-- 内层典雅细线框 -->
                     <div class="absolute inset-2 border border-amber-900/5 rounded-xl pointer-events-none"></div>
@@ -116,11 +116,11 @@
                             <div class="inline-flex items-center gap-1 bg-amber-700/10 text-amber-800 text-[10px] font-bold tracking-wider px-2 py-0.5 rounded-md mb-1.5">
                                 <span>华文释义</span>
                             </div>
-                            <p id="card-def-zh" class="text-[15px] font-semibold text-stone-800 leading-relaxed pl-1">暂无释义</p>
+                            <p id="card-def-zh" class="text-[14px] font-semibold text-stone-800 leading-relaxed pl-1">暂无释义</p>
                         </div>
 
                         <!-- 翻译双栏区块（左英文，右国文） -->
-                        <div class="grid grid-cols-2 gap-3 border-t border-b border-amber-900/5 py-3 my-2">
+                        <div class="grid grid-cols-2 gap-3 border-t border-b border-amber-900/5 py-2.5 my-1">
                             <!-- 英文翻译 -->
                             <div>
                                 <div class="inline-flex items-center gap-1 bg-sky-100/60 text-sky-800 text-[9px] font-bold tracking-wider px-1.5 py-0.5 rounded mb-1">
@@ -137,9 +137,9 @@
                             </div>
                         </div>
 
-                        <!-- 温馨提示底栏 -->
-                        <div class="bg-white/60 border border-amber-950/5 p-3 rounded-xl shadow-sm text-center">
-                            <p class="text-stone-400 text-[11px] tracking-wide">💡 点击卡片任意位置即可翻转查看双语对照</p>
+                        <!-- 例句语境展示区（带智能挖空机制） -->
+                        <div id="card-example-box">
+                            <!-- 动态加载例句 -->
                         </div>
                     </div>
                 </div>
@@ -171,7 +171,7 @@
             <button onclick="closeQuiz()" class="absolute top-3 right-3 text-stone-400 hover:text-stone-600 text-xl font-bold transition-colors">&times;</button>
             
             <div class="border-b border-stone-100 pb-2 mb-3">
-                <h3 class="text-base font-bold text-stone-800 flex items-center gap-1" id="quiz-title-text">🎯 谚语释义挑战</h3>
+                <h3 class="text-base font-bold text-stone-800 flex items-center gap-1" id="quiz-title-text">🎯 谚语多维挑战</h3>
                 <div class="w-full bg-stone-100 h-1.5 rounded-full mt-2 overflow-hidden">
                     <div id="quiz-progress-bar" class="bg-amber-500 h-full transition-all duration-300" style="width: 0%"></div>
                 </div>
@@ -199,7 +199,7 @@
     </div>
 
     <!-- ==========================================
-         🧱 核心数据引入区（严格加载您的6个分卷数据文件）
+         🧱 核心数据引入区（严格解耦自6个分卷文件）
          ========================================== -->
     <script src="data-proverb-1.js"></script>
     <script src="data-proverb-2.js"></script>
@@ -209,7 +209,7 @@
     <script src="data-proverb-6.js"></script>
 
     <!-- ==========================================
-         🧬 主数据合并与展开 (适配 150 句谚语数据字段)
+         🧬 主数据自动打包器与合并中心
          ========================================== -->
     <script>
         let allProverbs = [];
@@ -222,25 +222,25 @@
     </script>
 
     <!-- ==========================================
-         🎮 核心交互逻辑控制层 (完美移接全套高定功能)
+         🎮 核心业务及交互逻辑控制引擎
          ========================================== -->
     <script>
-        let currentPlan = [];       // 当前过滤状态下的数组计划队列
-        let currentIndex = 0;       // 指针
-        let isFlipped = false;      // 正反翻转状态
-        let isWeaknessMode = false;  // 是否开启错题模式
-        let activeLetter = 'ALL';   // 活动的检索拼音字母
+        let currentPlan = [];       
+        let currentIndex = 0;       
+        let isFlipped = false;      
+        let isWeaknessMode = false;  
+        let activeLetter = 'ALL';   
 
-        // 测验系统
+        // 测验数据流
         let quizQuestions = [];     
         let quizCurrentIndex = 0;   
         let quizScore = 0;          
         const QUIZ_TOTAL = 10;      
 
-        // 拼音汉字完美对齐渲染引擎（智能处理逗号句号等标点，使其无拼音下沉）
+        // 正面渲染引擎：拼音严格按照空格拆解映射汉字，支持纯符号完美下沉不带悬浮音标
         function generateRubyMarkup(text, pinyinStr) {
             const chars = text.split('');
-            const pinyins = pinyinStr.split(' ');
+            const pinyins = pinyinStr ? pinyinStr.split(' ') : [];
             let html = '';
             let pyIndex = 0;
             const puncts = ['，', '。', '；', '：', '？', '！', ',', '.', ' ', '、'];
@@ -248,7 +248,6 @@
             for (let i = 0; i < chars.length; i++) {
                 const char = chars[i];
                 if (puncts.includes(char)) {
-                    // 标点符号直接下沉输出，不加悬浮拼音
                     html += `<span class="mx-0.5 self-end text-2xl sm:text-3xl font-bold text-stone-600">${char}</span>`;
                 } else {
                     const py = pinyins[pyIndex] || '';
@@ -259,7 +258,7 @@
             return html;
         }
 
-        // 页面生命周期载入
+        // 应用生命周期挂载
         function initApp() {
             try {
                 let wrongList = JSON.parse(localStorage.getItem('yanyu_wrong_list')) || [];
@@ -271,11 +270,11 @@
                 renderCard();
                 updateMasteryProgress();
             } catch (error) {
-                console.error("初始化加载错误:", error);
+                console.error("初始化错误:", error);
             }
         }
 
-        // 动态构建具有有效数据的 A-Z 字母检索栏
+        // 基于全库有效数据动态剪裁 A-Z 标签过滤导航栏
         function buildAlphabetNav() {
             const activeLettersInData = new Set();
             allProverbs.forEach(p => {
@@ -318,11 +317,10 @@
             if (flipCardEl) flipCardEl.classList.remove('rotate-y-180');
             isFlipped = false;
 
-            // 1. 渲染正面注音
+            // 1. 卡片正面三维动态排版
             const rubyContainer = document.getElementById('card-yanyu-ruby');
             if (rubyContainer) {
                 rubyContainer.innerHTML = generateRubyMarkup(currentProverb.text, currentProverb.pinyin);
-                // 适配超长谚语的字号大小以防溢出
                 if(currentProverb.text.length > 12) {
                     rubyContainer.className = "yanyu-title flex flex-wrap items-center justify-center text-xl sm:text-2xl text-center leading-relaxed tracking-wide select-none px-2";
                 } else {
@@ -330,12 +328,37 @@
                 }
             }
 
-            // 2. 渲染反面三语翻译
+            // 2. 卡片反面三语结构渲染
             document.getElementById('card-def-zh').innerText = currentProverb.meaning || '暂无释义';
             document.getElementById('card-def-en').innerText = currentProverb.en || 'No translation available.';
             document.getElementById('card-def-bm').innerText = currentProverb.bm || 'Tiada terjemahan.';
+            
+            // 3. 例句上下文智能遮罩挖空
+            const exampleBox = document.getElementById('card-example-box');
+            if (exampleBox) {
+                const proverbText = currentProverb.text || '';
+                let exampleText = currentProverb.example || '';
+                
+                if (exampleText) {
+                    if (proverbText && exampleText.includes(proverbText)) {
+                        exampleText = exampleText.replace(proverbText, ` ______ `);
+                    }
+                    exampleBox.innerHTML = `
+                        <div class="bg-white/80 border border-amber-950/5 p-3.5 rounded-xl shadow-sm">
+                            <div class="inline-flex items-center gap-1 bg-amber-900/5 text-amber-900/70 text-[10px] font-bold tracking-wider px-1.5 py-0.5 rounded mb-1.5">
+                                <span>例句语境</span>
+                            </div>
+                            <p class="text-stone-700 text-[12.5px] font-medium leading-relaxed pl-0.5 tracking-wide">${exampleText}</p>
+                        </div>`;
+                } else {
+                    exampleBox.innerHTML = `
+                        <div class="bg-white/60 border border-amber-950/5 p-3 rounded-xl shadow-sm text-center">
+                            <p class="text-stone-400 text-[11px] tracking-wide">💡 点击卡片任意位置即可翻转查看双语对照</p>
+                        </div>`;
+                }
+            }
 
-            // 3. 更新页脚指示文本
+            // 4. 控制底线进度数据
             const progressEl = document.getElementById('progress-indicator');
             if (progressEl) {
                 progressEl.innerText = `进度：${currentIndex + 1} / ${currentPlan.length} ${isWeaknessMode ? '（错题训练中）' : ''}`;
@@ -419,7 +442,7 @@
         function startWeaknessTraining() {
             const wrongList = JSON.parse(localStorage.getItem('yanyu_wrong_list')) || [];
             if (wrongList.length === 0) {
-                showToast("✨ 极好！当前没有任何待加强的谚语！");
+                showToast("✨ 极好！当前没有任何待加强的错题！");
                 return;
             }
             isWeaknessMode = true;
@@ -460,7 +483,7 @@
         }
 
         // ==========================================
-        // 📝 智能多维题型小测验系统 (Quiz)
+        // 📝 智能三维小测验逻辑区 (Quiz System)
         // ==========================================
         function startQuiz() {
             const quizSource = currentPlan;
@@ -484,11 +507,11 @@
             const actualTotal = Math.min(QUIZ_TOTAL, quizSource.length);
             quizQuestions = shuffled.slice(0, actualTotal);
             
-            // 混合生成两种题型：0=看词选意，1=看意选词
+            // 混合分发 3 种独立题型模型：0=看词选意，1=看意选词，2=语境填空
             quizQuestions = quizQuestions.map(q => {
                 return {
                     ...q,
-                    qType: Math.floor(Math.random() * 2)
+                    qType: Math.floor(Math.random() * 3) 
                 };
             });
 
@@ -521,7 +544,7 @@
             const optionsContainer = document.getElementById('quiz-options');
 
             if (currentQ.qType === 0) {
-                // 【题型 0】：给谚语，选正确含义
+                // 【Type 0】：看词猜意
                 questionWordEl.innerHTML = `<span class="text-[10px] bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded font-sans font-medium">看词猜意</span><br><p class="mt-2 text-2xl font-serif font-bold text-stone-800">${currentQ.text}</p>`;
                 
                 optionsContainer.innerHTML = options.map(opt => {
@@ -533,9 +556,27 @@
                     `;
                 }).join('');
 
-            } else {
-                // 【题型 1】：给含义，选正确谚语
+            } else if (currentQ.qType === 1) {
+                // 【Type 1】：根据释义选词
                 questionWordEl.innerHTML = `<span class="text-[10px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded font-sans font-medium block w-max mx-auto mb-2">根据释义选谚语</span><p class="text-base font-medium font-sans px-4 text-stone-700 leading-relaxed text-left">${currentQ.meaning}</p>`;
+                
+                optionsContainer.innerHTML = options.map(opt => {
+                    const isCorrect = (opt.text === currentQ.text);
+                    return `
+                        <button onclick="handleQuizAnswer(this, ${isCorrect})" class="w-full text-center p-3 rounded-xl border-2 border-stone-100 hover:border-amber-400 hover:bg-amber-50/50 transition-all font-serif font-bold text-stone-800 text-sm sm:text-base">
+                            ${opt.text}
+                        </button>
+                    `;
+                }).join('');
+            } else {
+                // 【Type 2】：高阶语境挖空填空
+                let exampleText = currentQ.example || '目前这句谚语暂无例句语境支持。';
+                const proverbText = currentQ.text || '';
+                if (proverbText && exampleText.includes(proverbText)) {
+                    exampleText = exampleText.replace(proverbText, ` ______ `);
+                }
+                
+                questionWordEl.innerHTML = `<span class="text-[10px] bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded font-sans font-medium block w-max mx-auto mb-2">谚语语境填空</span><p class="text-sm font-medium font-sans px-4 text-stone-700 leading-relaxed text-left">${exampleText}</p>`;
                 
                 optionsContainer.innerHTML = options.map(opt => {
                     const isCorrect = (opt.text === currentQ.text);
@@ -605,7 +646,6 @@
             document.getElementById('quiz-eval').innerText = evaluation;
         }
 
-        // 预载初始化
         window.onload = function() {
             initApp();
         };
