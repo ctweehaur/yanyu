@@ -137,7 +137,7 @@ const pData3 = [
   {
     "id": 66,
     "text": "留得青山在，不怕没柴烧",
-    "pinyin": "liú dé qīng shān zài ， bù pà méi chái shāo",
+    "pinyin": "liú dé qīng shān zài bù pà méi chái shāo",
     "pinyin_key": "L",
     "meaning": "比喻只要保留住最根本的实力或核心本钱，以后就一定还有机会重新站起来。",
     "en": "Where there is life, there is hope; as long as green hills remain, there'll be no shortage of firewood.",
@@ -155,7 +155,7 @@ const pData3 = [
   {
     "id": 68,
     "text": "满招损，谦受益",
-    "pinyin": "mǎn zhāo sǔn ， qiān shòu yì",
+    "pinyin": "mǎn zhāo sǔn qiān shòu yì",
     "pinyin_key": "M",
     "meaning": "骄傲自满会给自己招来损害，而谦虚谨慎则会让自己得到益处。",
     "en": "Pride brings loss, humility brings benefit.",
@@ -209,7 +209,7 @@ const pData3 = [
   {
     "id": 74,
     "text": "谋事在人，成事在天",
-    "pinyin": "móu shì zài rén ， chéng sài zài tiān",
+    "pinyin": "móu shì zài rén chéng sài zài tiān",
     "pinyin_key": "M",
     "meaning": "指人们只能尽自己最大的努力去规划和争取，但最后能否成功还要看机遇或天意。",
     "en": "Man proposes, God disposes.",
