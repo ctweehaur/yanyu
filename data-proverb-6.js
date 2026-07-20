@@ -11,7 +11,7 @@ const pData6 = [
   {
     "id": 127,
     "text": "眼不见，心不烦",
-    "pinyin": "yǎn bù jiàn ， xīn bù fán",
+    "pinyin": "yǎn bù jiàn xīn bù fán",
     "pinyin_key": "X",
     "meaning": "指只要不亲眼看到让人讨厌或心烦的人和事物，心里就不会觉得烦恼。",
     "en": "Out of sight, out of mind.",
@@ -20,7 +20,7 @@ const pData6 = [
   {
     "id": 128,
     "text": "一波未平，一波又起",
-    "pinyin": "yī bō wèi píng ， yī bō yòu qǐ",
+    "pinyin": "yī bō wèi píng yī bō yòu qǐ",
     "pinyin_key": "Y",
     "meaning": "比喻一桩麻烦事或灾祸还没有彻底解决，新的问题又紧接着接二连三地发生了。",
     "en": "One trouble follows another; before one wave subsides, another rises.",
@@ -47,7 +47,7 @@ const pData6 = [
   {
     "id": 131,
     "text": "一分耕耘，一分收获",
-    "pinyin": "yī fēn gēng yún ， yī fēn shōu huò",
+    "pinyin": "yī fēn gēng yún yī fēn shōu huò",
     "pinyin_key": "Y",
     "meaning": "付出了多少辛勤的劳动和汗水，就一定会得到多少应有的回报。",
     "en": "No pain, no gain; you reap what you sow.",
@@ -56,7 +56,7 @@ const pData6 = [
   {
     "id": 132,
     "text": "一回生，二回熟",
-    "pinyin": "yī huí shēng ， èr huí shú",
+    "pinyin": "yī huí shēng èr huí shú",
     "pinyin_key": "Y",
     "meaning": "第一次见面或接触时感到陌生，到了第二次接触时就熟悉了。",
     "en": "Difficult at first, easy later; strangers at first meeting, friends at second.",
@@ -92,7 +92,7 @@ const pData6 = [
   {
     "id": 136,
     "text": "一言既出，驷马难追",
-    "pinyin": "yī yán jì chū ， sì mǎ nán zhuī",
+    "pinyin": "yī yán jì chū sì mǎ nán zhuī",
     "pinyin_key": "Y",
     "meaning": "一句话说出了口，用四匹马拉的快车也无法追回。比喻说话一定要极其守信用。",
     "en": "A word spoken cannot be recalled; promises must be kept.",
@@ -119,7 +119,7 @@ const pData6 = [
   {
     "id": 139,
     "text": "有借有还，再借不难",
-    "pinyin": "yǒu jiè yǒu hái ， zài jiè bù nán",
+    "pinyin": "yǒu jiè yǒu hái zài jiè bù nán",
     "pinyin_key": "Y",
     "meaning": "借了别人的财物能按时归还，以后再次向别人借用时就不会遭到拒绝。",
     "en": "Timely return of a loan makes borrowing again easy.",
@@ -209,7 +209,7 @@ const pData6 = [
   {
     "id": 149,
     "text": "种瓜得瓜，种豆得豆",
-    "pinyin": "zhòng guā dé guā ， zhòng dòu dé dòu",
+    "pinyin": "zhòng guā dé guā zhòng dòu dé dòu",
     "pinyin_key": "Z",
     "meaning": "比喻做了什么样的善因或恶因，就一定会得到什么样的相应报应或结果。",
     "en": "As you sow, so shall you reap.",
