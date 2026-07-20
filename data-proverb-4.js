@@ -19,7 +19,7 @@ const pData4 = [
   },
   {
     "id": 78,
-    "text": "平时不烧香，<br>临时抱佛脚",
+    "text": "平时不烧香，临时抱佛脚",
     "pinyin": "píng shí bù shāo xiāng lín shí bào fó jiǎo",
     "pinyin_key": "P",
     "meaning": "比喻平时不作任何准备，到了情况紧急时才仓促想办法应付。",
